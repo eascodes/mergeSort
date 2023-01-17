@@ -8,11 +8,8 @@ function mergeSort(arr) {
     
     left = mergeSort(left);
     right = mergeSort(right);
-    
-    return merge(left, right);    
-}
 
-function merge(arr1, arr2) {
+    function merge(arr1, arr2) {
     let result = [];
 
     if (arr1 == undefined) {
@@ -30,4 +27,7 @@ function merge(arr1, arr2) {
         }
     }
     return result;
+    }  
+    
+    return merge(left, right);    
 }
